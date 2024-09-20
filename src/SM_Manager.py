@@ -1,5 +1,8 @@
+from fastapi import FastAPI
 
+app = FastAPI()
 
+@app.get("/")
 
-if __name__ == "__main__":
-    text = input("Yell something at a mountain: ")
+async def root():
+    return {"message": "Hello World"}
